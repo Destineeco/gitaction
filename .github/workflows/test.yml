@@ -1,0 +1,27 @@
+name: Cypress Tests
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+# Operating system
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: npm run test
