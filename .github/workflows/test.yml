@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Test workflow
 
 on:
   pull_request:
@@ -6,22 +6,28 @@ on:
       - develop
 
 jobs:
+  test:
 # Operating system
-  cypress-run:
     runs-on: ubuntu-latest
 
     steps:
     # Get code from repo
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js 21.x
+        uses: actions/setup-node@v1
         with:
           node-version: 21.x
 
+        # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cypress tests
-        run: npm run test
+        # Run Build
+      - name: Run Build
+        run: npm run build
+
+        # Run tests
+      - name: Run tests
+        run: npm run test-component
