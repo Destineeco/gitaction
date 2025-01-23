@@ -12,22 +12,22 @@ jobs:
       steps:
         - uses: actions/checkout@v3
 
-        - name: Setup Node.js
+        - name: use Node.js 21.x
           uses: actions/setup-node@v2
           with:
-            node-version: '21.x'
+            node-version: 21.x
 
-          # Install dependencies
+        # Install dependencies
         - name: Install dependencies
           run: npm install
         
-          # Run Build
+        # Run Build
         - name: Run Build
           run: npm run build
 
-          # Run seed
-          - name: Run seed
-            run: npm run seed
+        # Run seed
+        - name: Run seed
+          run: npm run seed
 
         # Run develop
         - name: Deploy
