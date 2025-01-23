@@ -6,6 +6,7 @@ on:
       - develop
 
 jobs:
+  test:
 # Operating system
     runs-on: ubuntu-latest
 
