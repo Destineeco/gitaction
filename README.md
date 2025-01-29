@@ -34,9 +34,9 @@ This project sets up a CI/CD pipeline using GitHub Actions to automate Cypress t
    ```bash
    npx cypress open
    ```
-
+<!-- 
 ![Screenshot](./images/Screenshot%202025-01-29%20171028.png)
-
+ -->
 
 ## Contribution
 Destineeco
