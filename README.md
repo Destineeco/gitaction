@@ -35,6 +35,9 @@ This project sets up a CI/CD pipeline using GitHub Actions to automate Cypress t
    npx cypress open
    ```
 
+![Screenshot](./images/Screenshot%202025-01-29%20171028.png)
+![Screenshot](./images/Screenshot%202025-01-29%20172446.png)
+
 
 
 ## Contribution
@@ -44,7 +47,6 @@ Destineeco
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
 https://gitact.onrender.com
 
 
